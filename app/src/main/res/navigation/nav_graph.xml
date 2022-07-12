@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/SelectPointsFragment">
+
+    <fragment
+        android:id="@+id/SelectPointsFragment"
+        android:name="com.tablegraphictask.ui.points.view.SelectPointsFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_select_points">
+
+        <action
+            android:id="@+id/action_SelectPointsFragment_to_DisplayGraphicFragment"
+            app:destination="@id/DisplayGraphicFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DisplayGraphicFragment"
+        android:name="com.tablegraphictask.ui.graphic.view.DisplayGraphicFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_display_graphic">
+        <action
+            android:id="@+id/action_DisplayGraphicFragment_to_SelectPointsFragment"
+            app:destination="@id/SelectPointsFragment" />
+
+    </fragment>
+
+</navigation>
